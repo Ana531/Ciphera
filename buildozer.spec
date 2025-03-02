@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Saxeli
+title = Ciphera v_02.23
 
 # (str) Package name
-package.name = SaxeliApp
+package.name = Ciphera v_02.23
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,speechrecognition,pyjnius
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -95,7 +95,10 @@ fullscreen = 0
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-#android.permissions = android.permission.RECORD_AUDIO, android.permission.INTERNET
+android.permissions = RECORD_AUDIO,INTERNET,WAKE_LOCK
+android.permissions += SYSTEM_ALERT_WINDOW,FOREGROUND_SERVICE
+
+
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
